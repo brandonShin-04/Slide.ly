@@ -1,10 +1,8 @@
-from flask import Flask, render_template, request
+from flask import Flask
+
 app = Flask(__name__)
 
-@app.route('/', methods=['GET', 'POST'])
-def index():
-    # Your main logic will go here
-    return render_template('index.html')
+@app.route("/")
 
-if __name__ == '__main__':
-    app.run(debug=True)
+def hello_world():
+    return "<p>Hello, World!</p>"
